@@ -7,8 +7,8 @@ import time
 import requests
 
 # Render/Koyeb မဟုတ်ဘဲ Cloud Shell မှာသုံးရင် environment variable ကို code ထဲမှာပဲ ခဏထည့်ထားလို့ရပါတယ်
-BINANCE_API_KEY = 'G89PG77RtA2SS9JbuiVTYZ9kcbk8cxBvilDIZSolBiAelcE31N8eZAOd7cWufeHC'
-BINANCE_SECRET = 'xmLtQ6vCOHINRCtovPKarDDHJ9SxV3le77kHRmPql2SCeGz9LpOgKBENji6KiNtz'
+BINANCE_API_KEY = '7Gs3LADx6b9waxEI0Rfejo41WmgTGFUJlg6zk5RlZbJhNJUCstj8YEBKcyYwjIpQ'
+BINANCE_SECRET = '9ZcJPRe2PpKNEaqMtIqz4o1jVNUiNkMpIxwV9qYluTAuJecAjsQHI8yNEUPbA4wo'
 TELEGRAM_TOKEN = '8386199745:AAGpDPB2yYVfGKf4YJlUrWJ-D-zf5KDop5Y'
 TELEGRAM_CHAT_ID = '8701531697'
 
