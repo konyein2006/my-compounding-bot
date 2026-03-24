@@ -55,7 +55,7 @@ def prepare_indicators(df):
 def train_model():
     all_data = []
     send_telegram("⏳ *ဈေးကွက်ဒေတာများကို စတင်လေ့လာနေပါသည်...*")
-    
+
     for symbol in symbols:
         try:
             ohlcv = exchange.fetch_ohlcv(symbol, timeframe='1h', limit=1000)
@@ -64,10 +64,11 @@ def train_model():
             df['target'] = np.where(df['close'].shift(-5) > (df['close'] * 1.015), 1, 0)
             all_data.append(df.dropna())
         except: continue
-            
+
     if not all_data:
-            print("⚠️ Binance ဆီမှ ဒေတာ မရရှိပါ။ IP Whitelist ကို စစ်ဆေးပါ။")
-            return None  # Error မတက်အောင် ကျော်ခိုင်းလိုက်တာပါ    
+        print("⚠️ Binance ဆီမှ ဒေတာ မရရှိပါ။ IP Whitelist ကို စစ်ဆေးပါ။")
+        return None
+
     final_df = pd.concat(all_data)
     features = ['ema_200', 'vol_surge', 'rsi', 'close']
     model = XGBClassifier(n_estimators=1000, max_depth=8, learning_rate=0.01)
