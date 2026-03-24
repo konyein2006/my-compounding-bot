@@ -1,20 +1,18 @@
+import os
 import ccxt
 import pandas as pd
 import numpy as np
 from xgboost import XGBClassifier
 import time
 import requests
-import os  # Environment Variables ဖတ်ရန် လိုအပ်သည်
 
-# ==========================================
-# ၁။ Render Environment Variables မှ Data များယူခြင်း
-# (GitHub မှာ Key အစစ်တွေ ရေးစရာမလိုတော့ပါ)
-# ==========================================
-BINANCE_API_KEY = os.getenv('BINANCE_API_KEY')
-BINANCE_SECRET = os.getenv('BINANCE_SECRET')
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+# Render/Koyeb မဟုတ်ဘဲ Cloud Shell မှာသုံးရင် environment variable ကို code ထဲမှာပဲ ခဏထည့်ထားလို့ရပါတယ်
+BINANCE_API_KEY = 'G89PG77RtA2SS9JbuiVTYZ 9kcbk8cxBvilDIZSolBiAelcE31N8eZAOd7cWufeHC'
+BINANCE_SECRET = 'xmLtQ6vCOHINRCtovPKarDD HJ9SxV3le77kHRmPql2SCe Gz9LpOgKBENji6KiNtz'
+TELEGRAM_TOKEN = '8386199745:AAGpDPB2yYVfGKf4YJlUrWJ-D-zf5KDop5Y'
+TELEGRAM_CHAT_ID = '8701531697'
 
+# ... (ကျန်တဲ့ Bot Code အကုန်လုံးကို အောက်မှာ ဆက်ထည့်ပါ)
 # ==========================================
 # ၂။ Bot Settings (Hyper-Compounding)
 # ==========================================
